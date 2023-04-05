@@ -1,0 +1,97 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+  background-color: red;
+  color: white;
+  height: 40px;
+  margin-left: 20px;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 20px; 
+}
+
+.menu ul li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu ul li:hover {
+  background-color: black;
+}
+
+.menu ul li:hover > .dropdown {
+  display: block;
+  z-index: 999; 
+}
+
+.dropdown {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: black;
+  display: none;
+}
+
+.dropdown li {
+  display: block;
+}
+
+.dropdown li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+@media only screen and (max-width: 100px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .menu {
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu ul li {
+    margin-right: 0;
+  }
+
+  .dropdown {
+    position: static;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .menu ul li:hover > .dropdown {
+    display: none;
+  }
+}
