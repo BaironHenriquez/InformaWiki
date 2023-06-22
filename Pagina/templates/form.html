@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio sesión</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body>
+
+  <!-- ***** Header Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                      <h2 class="logo">InformaWiki</h2>
+                    </a>
+                    <!-- ***** Logo End ***** -->
+  
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="sobreNosotros.html">sobre nosotros</a></li>
+                        <li><a href="Cursos.html">cursos</a></li>
+                        <li><a href="profile.html">perfil</a></li>
+                        <nav class="navigation">
+                            <button class="btnLogin-popup">Inicia sesión</button>
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+
+        <div class="form-box login">
+            <h2>Inicia sesión</h2>
+            <form name="form1" action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" name="email" required> <!-- faltaba agregarle la propiedad NAME -->
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" name="password" required> <!-- faltaba agregarle la propiedad NAME -->
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Recuerdame</label>
+                    <a href="#">Olvidaste tu contraseña?</a>
+                </div>
+                <button onclick=login() type="submit" class="btn">Enviar</button> <!-- Acá llamamos a la funcion login al hacer clic -->
+                <div class="login-register">
+                    <p>No tienes una cuenta? <a href="#" class="register-link">Registrate</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Registrate</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Estoy de acuerdo con los terminos y servicios.</label>
+                </div>
+                <button type="submit" class="btn">Registrar</button>
+                <div class="login-register">
+                    <div>Ya tienes una cuenta? <a href="#" class="login-link">Inicia sesión</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
