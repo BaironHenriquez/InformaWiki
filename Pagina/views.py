@@ -18,6 +18,9 @@ def profile_view(request):
 def sobreNosotros_view(request):
     return render(request, 'sobreNosotros.html')
 
+def Formulario_view(request):
+    return render(request,'Formulario.html')
+
 
 
 
