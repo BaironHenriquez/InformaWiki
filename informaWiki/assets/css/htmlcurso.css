@@ -1,0 +1,44 @@
+.video-container {
+    margin: 0 auto; /* Center the container horizontally */
+    position: relative; /* This will allow us to position the copyright notice below the container */
+  }
+  
+  .copyright {
+    position: absolute; /* This will position the copyright notice relative to the video container */
+    bottom: 0; /* This will position the copyright notice at the bottom of the container */
+    left: 0; /* This will position the copyright notice at the left edge of the container */
+    width: 100%; /* This will make the copyright notice the same width as the container */
+    text-align: center; /* This will center the text of the copyright notice */
+  }
+
+  /* Estilos para el contenedor de video */
+.video-container {
+    background-color: black;
+    width: 640px; /* Ancho del contenedor */
+    height: 360px; /* Alto del contenedor */
+  }
+
+.video{
+    bottom: -400px;
+    position: relative;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+
+
+ #textof{
+    text-align: center;
+    padding: 30px 0px;
+    color: #fff;
+    font-weight: 300;
+  }
+  
+#textof, #info {
+    color: #fff;
+    transition: all .3s;
+  }
+  
+#textof, #info:hover {
+    color: #ec6090;
+  }

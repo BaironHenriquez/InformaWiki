@@ -934,11 +934,16 @@ Footer Style
 --------------------------------------------- 
 */
 
+
+
 footer p {
   text-align: center;
   padding: 30px 0px;
   color: #fff;
   font-weight: 300;
+  position: relative;
+    bottom: -400px;
+    right: -20px;
 }
 
 footer p a {

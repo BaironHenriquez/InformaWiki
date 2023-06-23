@@ -10,20 +10,35 @@
 
     <title>Cursos</title>
 
-    <!-- Bootstrap core CSS -->
+    
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
-    <!-- Additional CSS Files -->
+
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <script src="../informaWiki/assets/js/cursos.js"></script>
   </head>
 
 <body>
-  <!-- ***** Preloader Start ***** -->
+
+  <div id="player"></div>
+
+  <script>
+
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  </script>
+
+  <div id="app"></div>
+  <script src="cursos.js" type="module"></script>
+
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
       <span class="dot"></span>
@@ -34,21 +49,21 @@
       </div>
     </div>
   </div>
-  <!-- ***** Preloader End ***** -->
 
-  <!-- ***** Header Start ***** -->
+
+
   <header class="header-area header-sticky">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
+
                     <a href="index.html" class="logo">
                       <h2 class="logo">InformaWiki</h2>
                     </a>
-                    <!-- ***** Logo End ***** -->
+                   
   
-                    <!-- ***** Menu Start ***** -->
+                    
                     <ul class="nav">
                         <li><a href="sobreNosotros.html">sobre nosotros</a></li>
                         <li><a href="Cursos.html">cursos</a></li>
@@ -58,20 +73,20 @@
                     <a class='menu-trigger'>
                         <span>Menu</span>
                     </a>
-                    <!-- ***** Menu End ***** -->
+                    
                 </nav>
             </div>
         </div>
     </div>
   </header>
-  <!-- ***** Header Area End ***** -->
+  
 
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
         <div class="page-content">
 
-          <!-- ***** Live Stream Start ***** -->
+          
           <div class="live-stream">
             <div class="col-lg-12">
               <div class="heading-section">
@@ -86,7 +101,18 @@
                     <div class="hover-effect">
                       <div class="content">
                         <div class="live">
-                          <a href="#">Live</a>
+                          <a href="../informaWiki/htmlcurso.html" id="live-link">Live</a>
+                          <script>
+                            // Dejar esto para buen uso :)
+                            var player;
+                            function onYouTubeIframeAPIReady() {
+                              player = new YT.Player('player', {
+                                events: {
+                                  'onStateChange': onPlayerStateChange
+                                }
+                              });
+                            }                          
+                          </script>
                         </div>
 
                       </div>
@@ -108,7 +134,9 @@
                     <div class="hover-effect">
                       <div class="content">
                         <div class="live">
-                          <a href="#">Live</a>
+                          <a href="/informaWiki/" id="live-link">Live</a>
+                          <div id="player-container"></div>
+
                         </div>
                       </div>
                     </div>
@@ -129,7 +157,7 @@
                     <div class="hover-effect">
                       <div class="content">
                         <div class="live">
-                          <a href="#">Live</a>
+                          <a href="../informaWiki/iacurso.html">Live</a>
                         </div>
                       </div>
                     </div>
@@ -150,7 +178,7 @@
                     <div class="hover-effect">
                       <div class="content">
                         <div class="live">
-                          <a href="#">Live</a>
+                          <a href="../informaWiki/cybercurso.html">Live</a>
                         </div>
                       </div>
                     </div>
@@ -171,7 +199,7 @@
                     <div class="hover-effect">
                       <div class="content">
                         <div class="live">
-                          <a href="#">Live</a>
+                          <a href="../informaWiki/lenprocurso.html">Live</a>
                         </div>
                       </div>
                     </div>
@@ -192,7 +220,7 @@
                     <div class="hover-effect">
                       <div class="content">
                         <div class="live">
-                          <a href="#">Live</a>
+                          <a href="../informaWiki/disejuegocurso.html">Live</a>
                         </div>
                       </div>
                     </div>
@@ -213,7 +241,7 @@
                     <div class="hover-effect">
                       <div class="content">
                         <div class="live">
-                          <a href="#">Live</a>
+                          <a href="../informaWiki/javacurso.html">Live</a>
                         </div>
                       </div>
                     </div>
@@ -234,7 +262,7 @@
                     <div class="hover-effect">
                       <div class="content">
                         <div class="live">
-                          <a href="#">Live</a>
+                          <a href="../informaWiki/equipocurso.html">Live</a>
                         </div>
                       </div>
                     </div>
@@ -255,7 +283,6 @@
               </div>
             </div>
           </div>
-          <!-- ***** Live Stream End ***** -->
 
         </div>
       </div>
@@ -273,8 +300,7 @@
   </footer>
 
 
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
+
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
