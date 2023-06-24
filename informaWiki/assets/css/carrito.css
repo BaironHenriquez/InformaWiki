@@ -1,0 +1,87 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #1f2122;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  #product-list,
+  #cart {
+    width: 50%;
+  }
+  
+  #product-list h2,
+  #cart h2 {
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  #product-list li {
+    margin-bottom: 5px;
+  }
+  
+  #product-list li button,
+  #cart button {
+    background-color: #ec6090;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #product-list li button:hover,
+  #cart button:hover {
+    background-color: #ff86ab;
+  }
+  
+  #cart {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+  }
+  
+  #cart h2 {
+    margin-bottom: 10px;
+    color: #ec6090;
+  }
+  
+  #cart p {
+    font-weight: bold;
+    color: #ec6090;
+    margin-bottom: 10px;
+  }
+  
+  #cart-items li {
+    margin-bottom: 10px;
+    color: #ec6090;
+    border-bottom: 1px solid #ec6090;
+    padding-bottom: 5px;
+  }
+  
+  #payment-type {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ec6090;
+    background-color: #fff;
+    color: #ec6090;
+    font-size: 14px;
+  }
+  
