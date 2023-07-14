@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio sesión</title>
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+        <style>
+            /* Estilos adicionales para hacer la barra de navegación fija */
+            .header-area {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 999;
+                background-color: #fff; /* Cambia el color de fondo según tus necesidades */
+            }
+    
+            .wrapper {
+                padding-top: 80px; /* Añade un padding-top para evitar que el contenido se superponga a la barra de navegación fija */
+            }
+        </style>
+    </head>
+    
+    <body>
+    
+
+        <header class="header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="main-nav">
+                           
+                            <a href="{% url 'index' %}" class="logo">
+                                <h2 class="logo">InformaWiki</h2>
+                            </a>
+
+                            <ul class="nav">
+                                <li><a href="{% url 'sobreNosotros' %}">sobre nosotros</a></li>
+                                <li><a href="{% url 'cursos' %}">cursos</a></li>
+                                <li><a href="{% url 'profile' %}">perfil</a></li>
+                                <li><a href="{% url 'Formulario' %}">Inicio sesión <img src="{% static 'assets/images/profile.jpg' %}" alt=""></a></li>
+                            </ul>   
+                            <a class='menu-trigger'>
+                                <span>Menu</span>
+                            </a>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+
+        <div class="form-box login">
+            <h2>Inicia sesión</h2>
+            <form name="form1" action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" name="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Recuérdame</label>
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+                <button onclick="login()" type="submit" class="btn">Enviar</button>
+                <div class="login-register">
+                    <p>¿No tienes una cuenta? <a href="#" class="register-link">Regístrate</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Regístrate</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Acepto los términos y servicios.</label>
+                </div>
+                <button type="submit" class="btn">Registrar</button>
+                <div class="login-register">
+                    <div>¿Ya tienes una cuenta? <a href="#" class="login-link">Inicia sesión</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="{% static 'assets/js/script.js' %}"></script>
+    <script
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        type="module"
+    ></script>
+    <script
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        nomodule
+    ></script>
+</body>
+
+</html>
